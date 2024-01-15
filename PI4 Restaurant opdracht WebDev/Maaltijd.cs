@@ -21,10 +21,5 @@ namespace PI4_Restaurant_opdracht_WebDev
 
         }
 
-        public string toString()
-        {
-            
-
-        }
-    }
+     }
 }

@@ -2,6 +2,8 @@
 
 public class Restaurant
 {
+    Bestelling bestelling;
+    Maaltijd maaltijd;
 
     public int AANTALTAFELS = 20;
     public int AANTALBESTELLINGEN = 50;
@@ -10,16 +12,14 @@ public class Restaurant
 
     public Restaurant()
     {
-        
-        Restaurant r = new Restaurant();
-
+        Restaurant restaurant = new Restaurant();
     }
 
-    public start()
+    public void start() 
     {
-       
-        
+        new Kok().BereidMaaltijden(bestelling, maaltijd);
 
+        return;     
     }
    
 }

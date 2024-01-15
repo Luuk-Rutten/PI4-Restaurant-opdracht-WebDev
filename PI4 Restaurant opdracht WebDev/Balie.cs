@@ -27,8 +27,7 @@ namespace PI4_Restaurant_opdracht_WebDev
 
         public bool ErZijnNogBestellingen()
         {
-            while (ErZijnNogBestellingen() == true)
-            {
+                     
                 if (Bestellingen.Count == 0)
                 {
                     ToonAantalBestellingen();
@@ -38,15 +37,25 @@ namespace PI4_Restaurant_opdracht_WebDev
                 else
                 {
                     ToonAantalBestellingen();
-                    //return true;
+                    return true;
                 }
-              //  return false;
-            }
+              
+            
  
         }
         public bool ErZijnNogMaaltijden()
         {
+            if (Maaltijden.Count == 0)
+            {
+                ToonAantalMaaltijden();
+                return false;
+            }
 
+            else
+            {
+                ToonAantalMaaltijden();
+                return true;
+            }
 
         }
         public void GenereerBestellingen()  
@@ -63,7 +72,13 @@ namespace PI4_Restaurant_opdracht_WebDev
         }
         public void PakBestelling()
         {
-            ErZijnNogBestellingen();
+           // ErZijnNogBestellingen();
+            
+            if (ErZijnNogBestellingen())
+            {
+                Bestellingen.RemoveAt(0);
+
+            }
 
         }
         public void PakMaaltijd()
